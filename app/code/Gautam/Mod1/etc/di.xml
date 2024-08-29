@@ -11,6 +11,7 @@
                 <item name="key4" xsi:type="string">This is the custom array 2</item>
             </argument>
             <argument name="textString" xsi:type="string">Lets see if this is working</argument>
+            <argument name="logger" xsi:type="object">Psr\Log\LoggerInterface</argument>
         </arguments>
     </type>
 </config>
