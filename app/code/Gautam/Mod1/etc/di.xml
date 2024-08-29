@@ -1,0 +1,9 @@
+<type name="Gautam\Mod1\Model\Test">
+    <arguments>
+        <argument name="paramArray" xsi:type="array">
+            <item name="key1" xsi:type="string">value1</item>
+            <item name="key2" xsi:type="string">value2</item>
+        </argument>
+        <argument name="paramString" xsi:type="string">This is a test string</argument>
+    </arguments>
+</type>
