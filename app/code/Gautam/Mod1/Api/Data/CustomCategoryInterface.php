@@ -1,7 +1,8 @@
 <?php
-namespace Gautam\Mod1\Api\Data;
+
+namespace Gautam\Mod1\Api;
 
 interface CustomCategoryInterface
 {
-    public function getCustomCategoryData();
+    
 }

@@ -1,9 +1,16 @@
-<type name="Gautam\Mod1\Model\Test">
-    <arguments>
-        <argument name="paramArray" xsi:type="array">
-            <item name="key1" xsi:type="string">value1</item>
-            <item name="key2" xsi:type="string">value2</item>
-        </argument>
-        <argument name="paramString" xsi:type="string">This is a test string</argument>
-    </arguments>
-</type>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Api\Data\CategoryInterface" type="Gautam\Mod1\Model\CustomCategory" />
+
+    <type name="Gautam\Mod1\Test1">
+        <arguments>
+            <argument name="dataArray" xsi:type="array">
+                <item name="key1" xsi:type="string">Gautam Dadhich</item>
+                <item name="key2" xsi:type="string">This is the custom array</item>
+                <item name="key3" xsi:type="string">This is the custom array 1</item>
+                <item name="key4" xsi:type="string">This is the custom array 2</item>
+            </argument>
+            <argument name="textString" xsi:type="string">Lets see if this is working</argument>
+        </arguments>
+    </type>
+</config>

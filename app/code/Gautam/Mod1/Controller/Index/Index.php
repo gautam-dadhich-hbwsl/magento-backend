@@ -3,21 +3,23 @@ namespace Gautam\Mod1\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use Gautam\Mod1\Model\Test;
+use \Gautam\Mod1\Test1;
 
 class Index extends Action
 {
-    private $test;
+    protected $test1;
 
-    public function __construct(Context $context, Test $test)
-    {
-        parent::__construct($context);
-        $this->test = $test;
+    public function __construct(
+        Context $context,
+        Test1 $test1
+    ) {
+        $this->test1 = $test1;
+        return parent::__construct($context);
     }
 
     public function execute()
     {
-        $this->test->displayParams();
-        exit;
+        echo "HelloWorld\n\n";
+        $this->test1->displayParams();
     }
 }
