@@ -376,6 +376,7 @@ return [
         'Gautam_Mod1' => 1,
         'Gautam_Mod2' => 1,
         'Gautam_Mod3' => 1,
+        'Gautam_Mod4' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,
         'PayPal_BraintreeGiftCardAccount' => 1,
