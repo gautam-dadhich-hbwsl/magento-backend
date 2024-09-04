@@ -1,0 +1,25 @@
+<?php $employees = $block->getEmployeeData(); ?>
+<?php if (!empty($employees)): ?>
+    <table>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($employees as $employee): ?>
+                <tr>
+                    <td><?= $employee->getEmployeeId() ?></td>
+                    <td><?= $employee->getFirstName() ?></td>
+                    <td><?= $employee->getLastName() ?></td>
+                    <td><?= $employee->getEmailId() ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <p>No employee data available.</p>
+<?php endif; ?>

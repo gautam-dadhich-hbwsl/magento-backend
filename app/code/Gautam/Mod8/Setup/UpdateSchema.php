@@ -1,0 +1,1 @@
+<!-- These are the Old Methods we now use -> Model, Resource Model, Collection !! -->
