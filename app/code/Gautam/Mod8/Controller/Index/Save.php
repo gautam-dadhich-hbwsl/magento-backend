@@ -35,12 +35,13 @@ class Save extends Action
                 $employee->save();
                 $this->messageManager->addSuccessMessage(__('Employee data has been saved.'));
             } catch (\Exception $e) {
-                $this->messageManager->addErrorMessage(__('An error occurred while saving the employee data.'));
+                $this->messageManager->addErrorMessage(__('An error occurred while saving the employee data: ' . $e->getMessage()));
             }
+
             $this->dataPersistor->clear('employee_form_data');
         }
-        /** @var \Magento\Framework\Controller\Result\Redirect $resultRedirect */
-        $resultRedirect = $this->resultRedirectFactory->create();
-        return $resultRedirect->setPath('mod8/index/view');
+
+        return $this->resultRedirectFactory->create()->setPath('mod8/index/view');
     }
 }
+

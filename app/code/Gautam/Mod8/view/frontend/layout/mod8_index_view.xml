@@ -4,6 +4,6 @@
     <referenceContainer name="content">
         <block class="Gautam\Mod8\Block\TableData" name="employee_form" template="Gautam_Mod8::form.phtml"/>
         <block class="Gautam\Mod8\Block\TableData" name="employee_table" template="Gautam_Mod8::table.phtml"/>
-        <block class="Gautam\Mod8\Block\TableData" name="employee_table" template="Gautam_Mod8::employee.phtml"/>
+        <block class="Gautam\Mod8\Block\TableData" name="employee_data" template="Gautam_Mod8::employee.phtml"/>
     </referenceContainer>
 </layout>
