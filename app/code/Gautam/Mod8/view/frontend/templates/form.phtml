@@ -1,12 +1,22 @@
 <form action="<?= $block->getUrl('mod8/index/save') ?>" method="post">
+    <input type="hidden" name="form_key" value="<?= $block->getFormKey() ?>"/>
+    <label for="employee_id">Employee ID:</label>
+    <input type="text" name="employee_id" id="employee_id" required />
+
     <label for="first_name">First Name:</label>
-    <input type="text" id="first_name" name="first_name" required/>
+    <input type="text" name="first_name" id="first_name" required />
 
     <label for="last_name">Last Name:</label>
-    <input type="text" id="last_name" name="last_name" required/>
+    <input type="text" name="last_name" id="last_name" required />
 
     <label for="email_id">Email ID:</label>
-    <input type="email" id="email_id" name="email_id" required/>
+    <input type="email" name="email_id" id="email_id" required />
 
-    <button type="submit">Submit</button>
+    <label for="address">Address:</label>
+    <textarea name="address" id="address" required></textarea>
+
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" name="phone_number" id="phone_number" required />
+
+    <button type="submit">Save</button>
 </form>

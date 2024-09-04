@@ -1,0 +1,41 @@
+<?php
+$sortColumn = $block->getRequest()->getParam('sort', 'employee_id');
+$sortOrder = $block->getRequest()->getParam('dir', 'ASC');
+$employees = $block->getEmployeeData($sortColumn, $sortOrder);
+?>
+<form action="<?= $block->getUrl('mod8/index/delete') ?>" method="post">
+    <table>
+        <thead>
+            <tr>
+                <th><a href="<?= $block->getUrl('mod8/index/view', ['sort' => 'employee_id', 'dir' => ($sortOrder === 'ASC') ? 'DESC' : 'ASC']) ?>">Employee ID</a></th>
+                <th><a href="<?= $block->getUrl('mod8/index/view', ['sort' => 'first_name', 'dir' => ($sortOrder === 'ASC') ? 'DESC' : 'ASC']) ?>">First Name</a></th>
+                <th><a href="<?= $block->getUrl('mod8/index/view', ['sort' => 'last_name', 'dir' => ($sortOrder === 'ASC') ? 'DESC' : 'ASC']) ?>">Last Name</a></th>
+                <th><a href="<?= $block->getUrl('mod8/index/view', ['sort' => 'email_id', 'dir' => ($sortOrder === 'ASC') ? 'DESC' : 'ASC']) ?>">Email ID</a></th>
+                <th><a href="<?= $block->getUrl('mod8/index/view', ['sort' => 'address', 'dir' => ($sortOrder === 'ASC') ? 'DESC' : 'ASC']) ?>">Address</a></th>
+                <th><a href="<?= $block->getUrl('mod8/index/view', ['sort' => 'phone_number', 'dir' => ($sortOrder === 'ASC') ? 'DESC' : 'ASC']) ?>">Phone Number</a></th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if (!empty($employees)): ?>
+                <?php foreach ($employees as $employee): ?>
+                    <tr>
+                        <td><?= $employee->getEmployeeId() ?></td>
+                        <td><?= $employee->getFirstName() ?></td>
+                        <td><?= $employee->getLastName() ?></td>
+                        <td><?= $employee->getEmailId() ?></td>
+                        <td><?= $employee->getAddress() ?></td>
+                        <td><?= $employee->getPhoneNumber() ?></td>
+                        <td>
+                            <a href="<?= $block->getUrl('mod8/index/delete', ['id' => $employee->getId()]) ?>">Delete</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="7">No employee data available.</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</form>

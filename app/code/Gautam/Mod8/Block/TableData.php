@@ -2,7 +2,8 @@
 namespace Gautam\Mod8\Block;
 
 use Magento\Framework\View\Element\Template;
-use Gautam\Mod8\Model\ResourceModel\Employee\CollectionFactory;
+use Magento\Framework\Data\Collection\AbstractDb;
+use Magento\Framework\Data\Collection;
 
 class TableData extends Template
 {
@@ -10,16 +11,18 @@ class TableData extends Template
 
     public function __construct(
         Template\Context $context,
-        CollectionFactory $collectionFactory,
+        \Gautam\Mod8\Model\ResourceModel\Employee\CollectionFactory $collectionFactory,
         array $data = []
     ) {
         $this->collectionFactory = $collectionFactory;
         parent::__construct($context, $data);
     }
 
-    public function getEmployeeData()
+    public function getEmployeeData($sortColumn = 'employee_id', $sortOrder = 'ASC')
     {
+        /** @var Collection $collection */
         $collection = $this->collectionFactory->create();
+        $collection->setOrder($sortColumn, $sortOrder);
         return $collection->getItems();
     }
 }
