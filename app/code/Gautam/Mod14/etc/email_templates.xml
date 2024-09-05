@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/email_templates.xsd">
+    <template id="low_inventory_template" label="Low Inventory Notification" file="low_inventory_template.html" type="html" module="Gautam_Mod14" area="frontend"/>
+</config>
+<!-- This will be used when we need to send the email, and view/frontend/email/template is also useful at that time only !! -->

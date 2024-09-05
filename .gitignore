@@ -50,3 +50,5 @@ Thumbs.db
 /var/view_preprocessed/
 /pub/static/adminhtml/
 /pub/static/frontend/
+
+/app/code/Gautam/Mod15/
