@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/config.xsd">
+    <default>
+        <mod9_section>
+            <mod9_group>
+                <enable>0</enable>
+                <text_to_display></text_to_display>
+            </mod9_group>
+        </mod9_section>
+    </default>
+</config>

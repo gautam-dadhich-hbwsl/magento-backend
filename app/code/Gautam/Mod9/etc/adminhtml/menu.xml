@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/menu.xsd">
+    <menu>
+        <add id="Gautam_Mod9::mod9_menu" title="Mod9" module="Gautam_Mod9" sortOrder="100" resource="Gautam_Mod9::config"/>
+        <add id="Gautam_Mod9::mod9_submenu" title="Display Text" module="Gautam_Mod9" sortOrder="10" parent="Gautam_Mod9::mod9_menu" action="mod9/index/display" resource="Gautam_Mod9::config"/>
+    </menu>
+</config>
