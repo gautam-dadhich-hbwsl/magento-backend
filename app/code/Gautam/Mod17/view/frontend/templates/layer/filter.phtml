@@ -1,0 +1,30 @@
+<?php
+/**
+ * @var $block \Magento\LayeredNavigation\Block\Navigation\Filter
+ */
+$filter = $block->getFilter();
+?>
+
+<div class="filter-options-item">
+    <strong class="filter-options-title"><?= $block->escapeHtml($filter->getName()) ?></strong>
+    <div class="filter-options-content">
+        <ol class="items">
+            <?php foreach ($filter->getItems() as $item): ?>
+                <?php
+                    // Log the item to system.log
+                    $block->logFilterItem($item); // Log the item here
+
+                    $filterValue = $item->getValue(); // The rating value (e.g., 1, 2, 3, 4, 5)
+                    $itemLabel = $item->getLabel(); // The label (e.g., "1 Star", "2 Stars", etc.)
+                    $itemCount = $item->getCount(); // The product count for each rating
+                ?>
+                <li>
+                    <a href="<?= $block->getUrl($item->getUrl()) ?>">
+                        <?= $block->escapeHtml($itemLabel) ?>
+                        <span class="count">(<?= $itemCount ?>)</span>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+</div>
