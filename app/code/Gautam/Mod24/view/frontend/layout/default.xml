@@ -1,0 +1,7 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Mod24\Block\Config" name="mod24.config" template="Mod24::config.phtml" />
+        </referenceContainer>
+    </body>
+</page>

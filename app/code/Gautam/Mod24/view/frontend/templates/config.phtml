@@ -1,0 +1,14 @@
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Mod24/js/mod24": {
+            "salesEmails": <?= $block->getSalesEmails(); ?>,
+            "paymentMethods": <?= $block->getPaymentMethods(); ?>,
+            "shippingConfig": <?= $block->getShippingConfig(); ?>,
+            "taxConfig": <?= $block->getTaxConfig(); ?>,
+            "storeInformation": <?= $block->getStoreInformation(); ?>,
+            "generalConfig": <?= $block->getGeneralConfig(); ?>
+        }
+    }
+}
+</script>
